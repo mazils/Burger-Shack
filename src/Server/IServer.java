@@ -7,7 +7,7 @@ import java.rmi.RemoteException;
 
 public interface IServer extends Remote
 {
-    void send(Burger burger) throws RemoteException;
-    Burger get() throws RemoteException;
+    void putBurger(Burger burger) throws RemoteException;
+    Burger getBurger() throws RemoteException;
 
 }
