@@ -1,6 +1,6 @@
 package Server;
 
-import Domain.Burger;
+import Burger;
 
 import java.rmi.AlreadyBoundException;
 import java.rmi.RemoteException;

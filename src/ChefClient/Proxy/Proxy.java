@@ -1,6 +1,6 @@
-package Proxy;
+package ChefClient.Proxy;
 
-import Domain.Recipe;
+import ChefClient.Domain.Recipe;
 
 public class Proxy implements RecipeProvider {
 

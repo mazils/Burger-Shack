@@ -1,5 +1,3 @@
-package Domain;
-
 import java.io.Serializable;
 
 public class Burger implements Serializable {

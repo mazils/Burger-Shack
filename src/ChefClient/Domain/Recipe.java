@@ -1,5 +1,5 @@
-package Domain;
-import Domain.Burger;
+package ChefClient.Domain;
+import Burger;
 
 import java.util.Arrays;
 public class Recipe {

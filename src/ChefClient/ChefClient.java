@@ -1,8 +1,8 @@
 package ChefClient;
 
-import Domain.Burger;
-import Domain.Recipe;
-import Proxy.RecipeProvider;
+import Burger;
+import ChefClient.Domain.Recipe;
+import ChefClient.Proxy.RecipeProvider;
 import Server.RemoteServer;
 
 import java.rmi.RemoteException;

@@ -1,6 +1,6 @@
-package Proxy;
+package ChefClient.Proxy;
 
-import Domain.Recipe;
+import ChefClient.Domain.Recipe;
 
 /**
  * Interface to get and update a recipe

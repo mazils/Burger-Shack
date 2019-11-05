@@ -1,8 +1,8 @@
-package Proxy;
+package ChefClient.Proxy;
 
 
 
-import Domain.Recipe;
+import ChefClient.Domain.Recipe;
 
 import java.io.File;
 import java.io.FileNotFoundException;
