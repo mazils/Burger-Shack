@@ -10,7 +10,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 
 
-public class Server implements IServer
+public class Server implements RemoteServer
 {
 
 //    private BlockingQueue<Burger> blockingQueue;

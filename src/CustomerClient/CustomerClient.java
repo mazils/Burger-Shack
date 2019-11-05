@@ -1,19 +1,17 @@
 package CustomerClient;
 
-import Server.IServer;
+import Server.RemoteServer;
 
 
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
 
 public class CustomerClient implements Customer, Runnable{
-    private IServer bar;
+    private RemoteServer bar;
     private boolean working;
 
     public CustomerClient() throws RemoteException {
         //Registry registry = LocateRegistry.getRegistry("localhost",);
-        //bar = (IServer) registry.lookup();
+        //bar = (RemoteServer) registry.lookup();
         System.out.println("Connected");
         working = true;
     }
