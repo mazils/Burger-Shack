@@ -1,4 +1,7 @@
 package Proxy;
+
+import Domain.Recipe;
+
 /**
  * Interface to get and update a recipe
  */

@@ -1,5 +1,7 @@
 package Proxy;
 
+import Domain.Recipe;
+
 public class Proxy implements RecipeProvider {
 
     private RecipeReader recipeReader;

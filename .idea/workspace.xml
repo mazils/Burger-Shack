@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2440a06-33e6-4d27-a685-27d8f5d49c9b" name="Default Changelist" comment="Commited Burger">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c2440a06-33e6-4d27-a685-27d8f5d49c9b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChefClient/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChefClient/Chef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChefClient/ChefClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChefClient/ChefClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proxy/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Burger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proxy/Proxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proxy/Proxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proxy/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proxy/RecipeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proxy/RecipeProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Proxy/RecipeReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proxy/RecipeReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/RemoteServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/RemoteServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,7 +69,7 @@
       <updated>1572874505340</updated>
       <workItem from="1572874506805" duration="4026000" />
       <workItem from="1572899202075" duration="1888000" />
-      <workItem from="1572944121886" duration="8728000" />
+      <workItem from="1572944121886" duration="9604000" />
     </task>
     <task id="LOCAL-00001" summary="Commited Burger">
       <created>1572943057924</created>
@@ -100,7 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572955597180</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commited Burger">
+      <created>1572955833349</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572955833349</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commited Burger">
+      <created>1572955941931</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572955941931</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

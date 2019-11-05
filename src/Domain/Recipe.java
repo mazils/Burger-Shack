@@ -1,4 +1,6 @@
-package Proxy;
+package Domain;
+import Domain.Burger;
+
 import java.util.Arrays;
 public class Recipe {
 

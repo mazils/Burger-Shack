@@ -1,12 +1,10 @@
 package ChefClient;
 
-import Proxy.Burger;
-import Proxy.Recipe;
+import Domain.Burger;
+import Domain.Recipe;
 import Proxy.RecipeProvider;
 import Server.RemoteServer;
-import Server.RemoteServer;
 
-import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;

@@ -1,4 +1,4 @@
-package Proxy;
+package Domain;
 
 import java.io.Serializable;
 

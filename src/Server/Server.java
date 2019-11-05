@@ -1,6 +1,6 @@
 package Server;
 
-import Proxy.Burger;
+import Domain.Burger;
 
 import java.rmi.AlreadyBoundException;
 import java.rmi.RemoteException;

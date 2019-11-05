@@ -1,6 +1,6 @@
 package ChefClient;
 
-import Proxy.Burger;
+import Domain.Burger;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
