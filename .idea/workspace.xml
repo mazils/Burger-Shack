@@ -4,14 +4,6 @@
     <list default="true" id="c2440a06-33e6-4d27-a685-27d8f5d49c9b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChefClient/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChefClient/Chef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChefClient/ChefClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChefClient/ChefClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proxy/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Burger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proxy/Proxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proxy/Proxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proxy/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Recipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proxy/RecipeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proxy/RecipeProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Proxy/RecipeReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Proxy/RecipeReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/RemoteServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/RemoteServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +49,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ManagerClient.MainClass" />
+      <module name="Burger-Shack" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ManagerClient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainClass" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -69,7 +81,7 @@
       <updated>1572874505340</updated>
       <workItem from="1572874506805" duration="4026000" />
       <workItem from="1572899202075" duration="1888000" />
-      <workItem from="1572944121886" duration="9604000" />
+      <workItem from="1572944121886" duration="11227000" />
     </task>
     <task id="LOCAL-00001" summary="Commited Burger">
       <created>1572943057924</created>
@@ -120,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572955941931</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commited Burger">
+      <created>1572956670400</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572956670400</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
