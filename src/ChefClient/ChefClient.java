@@ -34,7 +34,7 @@ public class ChefClient implements Chef,  Runnable {
     }
 
     @Override
-    public void addBurgers(Burger burger) throws RemoteException {
+    public synchronized void addBurgers(Burger burger) throws RemoteException {
         server.putBurger(burger);
 
     }
@@ -52,7 +52,7 @@ public class ChefClient implements Chef,  Runnable {
         System.out.println("Added recipe to RecipeList");
     }
 
-    public void createBurgers() throws Exception {
+    public synchronized void createBurgers() throws Exception {
 
         Random rand= new Random();
         int ran= rand.nextInt((3-1)+1) + 1;
