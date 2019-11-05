@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2440a06-33e6-4d27-a685-27d8f5d49c9b" name="Default Changelist" comment="">
+    <list default="true" id="0750eca1-742b-48ad-b3bf-caa1af7e59f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Server/domain/Burger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server/domain/Recipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChefClient/Chef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChefClient/Chef.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,19 +15,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1TANxFM2caM396xiUg1qaZOtijC" />
+  <component name="ProjectId" id="1TD10UDjAUWnDbfjEwNMJZhVpk1" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572884253039" />
@@ -36,6 +38,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,97 +52,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ManagerClient.MainClass" />
-      <module name="Burger-Shack" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ManagerClient.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MainClass" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c2440a06-33e6-4d27-a685-27d8f5d49c9b" name="Default Changelist" comment="" />
+      <changelist id="0750eca1-742b-48ad-b3bf-caa1af7e59f7" name="Default Changelist" comment="" />
       <created>1572874505340</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572874505340</updated>
       <workItem from="1572874506805" duration="4026000" />
-      <workItem from="1572899202075" duration="1888000" />
-      <workItem from="1572944121886" duration="11227000" />
+      <workItem from="1572979629885" duration="1339000" />
     </task>
-    <task id="LOCAL-00001" summary="Commited Burger">
-      <created>1572943057924</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1572943057924</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Commited Burger">
-      <created>1572944298952</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1572944298952</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Commited Burger">
-      <created>1572946073294</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1572946073294</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Commited Burger">
-      <created>1572951894505</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1572951894505</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Commited Burger">
-      <created>1572955597180</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1572955597180</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Commited Burger">
-      <created>1572955833349</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1572955833349</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Commited Burger">
-      <created>1572955941931</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1572955941931</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Commited Burger">
-      <created>1572956670400</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1572956670400</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,9 +82,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commited Burger" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commited Burger" />
   </component>
 </project>
