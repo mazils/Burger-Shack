@@ -1,17 +1,17 @@
 package Proxy;
 
-public class CachedRecipeReader implements RecipeProvider {
+public class Proxy implements RecipeProvider {
 
     private RecipeReader recipeReader;
 
-    public CachedRecipeReader(RecipeReader recipeReader,String fileName)
+    public Proxy(RecipeReader recipeReader, String fileName)
     {
         this.recipeReader= recipeReader;
     }
 
     @Override
     public Recipe getRecipeById(String id) throws Exception {
-        if(recipeReader==null) {
+        if(recipeReader!=null) {
             return recipeReader.getRecipeById(id);
         }
         else
