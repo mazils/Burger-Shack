@@ -3,15 +3,19 @@ package CustomerClient;
 import Server.RemoteServer;
 
 
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import java.util.Random;
 
 public class CustomerClient implements Customer, Runnable{
     private RemoteServer bar;
     private boolean working;
 
-    public CustomerClient() throws RemoteException {
-        //Registry registry = LocateRegistry.getRegistry("localhost",);
-        //bar = (RemoteServer) registry.lookup();
+    public CustomerClient() throws RemoteException, NotBoundException {
+        Registry registry = LocateRegistry.getRegistry("localhost",8989);
+        bar = (RemoteServer) registry.lookup("Server");
         System.out.println("Connected");
         working = true;
     }
@@ -23,9 +27,15 @@ public class CustomerClient implements Customer, Runnable{
 
     @Override
     public void run() {
+        Random random = new Random();
         while(working){
-            // method to enqueue sth like -- bar.eatBurger();
+            try {
+                bar.getBurger();
+            }catch(RemoteException e){
+                e.printStackTrace();
+            }
             System.out.println("Client is eating burger");
+            int p = random.nextInt(8000-4000)+4000;
             try{
                 Thread.sleep(5000);
             }catch(InterruptedException e){
