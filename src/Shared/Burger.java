@@ -1,3 +1,5 @@
+package Shared;
+
 import java.io.Serializable;
 
 public class Burger implements Serializable {
@@ -30,7 +32,7 @@ public class Burger implements Serializable {
         @Override
         public String toString()
         {
-            return "Burger: " + name;
+            return "Shared.Burger: " + name;
         }
 
 

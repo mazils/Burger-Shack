@@ -1,5 +1,6 @@
 package ChefClient.Domain;
-import Burger;
+
+import Shared.Burger;
 
 import java.util.Arrays;
 public class Recipe {
@@ -54,7 +55,7 @@ public class Recipe {
 
     /**
      * Creating the burger with the same name as the recipe
-     * @return a new Burger object with the same name as the recipe
+     * @return a new Shared.Burger object with the same name as the recipe
      */
     public Burger createBurger()
     {

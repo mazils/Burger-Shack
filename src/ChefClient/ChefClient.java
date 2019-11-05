@@ -1,6 +1,6 @@
 package ChefClient;
 
-import Burger;
+import Shared.Burger;
 import ChefClient.Domain.Recipe;
 import ChefClient.Proxy.RecipeProvider;
 import Server.RemoteServer;
@@ -58,7 +58,7 @@ public class ChefClient implements Chef,  Runnable {
         Recipe rec=recipe.getRecipeById(random);
         Burger burg=rec.createBurger();
         addBurgers(burg);
-        System.out.println("Added a new Burger to the Queue");
+        System.out.println("Added a new Shared.Burger to the Queue");
     }
 
     @Override

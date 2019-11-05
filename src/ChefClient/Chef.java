@@ -1,6 +1,6 @@
 package ChefClient;
 
-import Burger;
+import Shared.Burger;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

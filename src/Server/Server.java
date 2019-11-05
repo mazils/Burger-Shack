@@ -1,6 +1,6 @@
 package Server;
 
-import Burger;
+import Shared.Burger;
 
 import java.rmi.AlreadyBoundException;
 import java.rmi.RemoteException;
@@ -13,7 +13,7 @@ import java.rmi.server.UnicastRemoteObject;
 public class Server implements RemoteServer
 {
 
-//    private BlockingQueue<Burger> blockingQueue;
+//    private BlockingQueue<Shared.Burger> blockingQueue;
     //todo queue implementation
 
     public Server() throws RemoteException
