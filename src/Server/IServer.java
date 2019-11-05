@@ -1,6 +1,7 @@
 package Server;
 
-import Server.domain.Burger;
+import Proxy.Burger;
+
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
