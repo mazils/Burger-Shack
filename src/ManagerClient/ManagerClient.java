@@ -8,13 +8,13 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Scanner;
 
-public class ManagerClient implements Manager, Runnable {
+public class ManagerClient implements Manager,  Runnable {
     private static final String STOP= "Close down burger bar";
     private RemoteServer server;
 
     public ManagerClient() throws RemoteException, NotBoundException {
-     //   Registry reg = LocateRegistry.getRegistry("Localhost", 1099);
-       // server= (RemoteServer) reg.lookup("Burgers");
+        Registry reg = LocateRegistry.getRegistry("Localhost", 1099);
+        server= (RemoteServer) reg.lookup("Burgers");
         System.out.println("connected to Server");
     }
 
