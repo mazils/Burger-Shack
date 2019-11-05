@@ -13,11 +13,11 @@ import java.rmi.server.UnicastRemoteObject;
 public class Server implements RemoteServer
 {
 
-//    private BlockingQueue<Shared.Burger> blockingQueue;
-    //todo queue implementation
+    private ListADT listADT;
 
     public Server() throws RemoteException
     {
+        listADT = new Adapter();
 
         try
         {
@@ -32,13 +32,17 @@ public class Server implements RemoteServer
     @Override
     public void putBurger(Burger burger) throws RemoteException
     {
-
+        //add burger to end of list
+        System.out.println("burger added to the list");
+        listADT.add(burger);
     }
 
     @Override
     public Burger getBurger() throws RemoteException
-    {
-        return null;//will be changed later
+    {   //returns last burger in the list and removes it from the list
+        System.out.println("burger taken from the list");
+        return (Burger) listADT.remove(listADT.size() -1);
+
     }
 
     public static void main(String[] args)

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0750eca1-742b-48ad-b3bf-caa1af7e59f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Server/domain/Burger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/domain/Recipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +62,16 @@
       <option name="presentableId" value="Default" />
       <updated>1572874505340</updated>
       <workItem from="1572874506805" duration="4026000" />
-      <workItem from="1572979629885" duration="1339000" />
+      <workItem from="1572979629885" duration="3128000" />
     </task>
+    <task id="LOCAL-00001" summary="Burger and Recipe added to server">
+      <created>1572981358582</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572981358582</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,5 +89,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Burger and Recipe added to server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Burger and Recipe added to server" />
   </component>
 </project>
