@@ -3,7 +3,8 @@ package ChefClient;
 import Proxy.Burger;
 import Proxy.Recipe;
 import Proxy.RecipeProvider;
-import Server.IServer;
+import Server.RemoteServer;
+import Server.RemoteServer;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -14,7 +15,7 @@ import java.util.Random;
 
 public class ChefClient implements Chef,  Runnable {
     private boolean Working = true;
-    private IServer server;
+    private RemoteServer server;
     private RecipeProvider recipe;
     private ArrayList<Recipe> recipeList;
 
@@ -23,7 +24,7 @@ public class ChefClient implements Chef,  Runnable {
         recipeList= new ArrayList<Recipe>();
         makeSomeRecipes();
         Registry reg = LocateRegistry.getRegistry("Localhost", 1099);
-        server= (IServer) reg.lookup("Burgers");
+        server= (RemoteServer) reg.lookup("Burgers");
         System.out.println("connected to Server");
     }
 
