@@ -39,9 +39,9 @@ public class Server implements RemoteServer
 
     @Override
     public Burger getBurger() throws RemoteException
-    {   //returns last burger in the list and removes it from the list
+    {   //returns first burger in the list and removes it from the list
         System.out.println("burger taken from the list");
-        return (Burger) listADT.remove(listADT.size() -1);
+        return (Burger) listADT.remove(0);
 
     }
 

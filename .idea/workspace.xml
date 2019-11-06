@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0750eca1-742b-48ad-b3bf-caa1af7e59f7" name="Default Changelist" comment="" />
+    <list default="true" id="0750eca1-742b-48ad-b3bf-caa1af7e59f7" name="Default Changelist" comment="Server updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572874505340</updated>
       <workItem from="1572874506805" duration="4026000" />
-      <workItem from="1572979629885" duration="3372000" />
+      <workItem from="1572979629885" duration="4129000" />
     </task>
     <task id="LOCAL-00001" summary="Burger and Recipe added to server">
       <created>1572981358582</created>
@@ -75,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572983177785</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Server updated">
+      <created>1572983198035</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572983198035</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
