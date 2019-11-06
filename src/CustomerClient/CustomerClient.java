@@ -9,12 +9,13 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Random;
 
-public class CustomerClient implements Customer, Runnable{
+public class CustomerClient implements Customer, Runnable
+{
     private RemoteServer bar;
     private boolean working;
 
     public CustomerClient() throws RemoteException, NotBoundException {
-        Registry registry = LocateRegistry.getRegistry("localhost",8989);
+        Registry registry = LocateRegistry.getRegistry("localhost",1099);
         bar = (RemoteServer) registry.lookup("Server");
         System.out.println("Connected");
         working = true;

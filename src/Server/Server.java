@@ -1,5 +1,7 @@
 package Server;
 
+import ChefClient.Chef;
+import CustomerClient.Customer;
 import Shared.Burger;
 
 import java.rmi.AlreadyBoundException;
@@ -44,6 +46,19 @@ public class Server implements RemoteServer
         return (Burger) listADT.remove(0);
 
     }
+    //todo shutdown method it will shutdown chefs and costumers // callback is needed to use
+    @Override
+    public void stopWorking(Customer customer, Chef chef) throws RemoteException
+    {
+        //callback 
+        System.out.println("Everyone stops working");
+        chef.stopWorking();
+        customer.stopWorking();
+    }
+
+
+
+
 
     public static void main(String[] args)
     {

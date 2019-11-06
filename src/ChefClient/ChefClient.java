@@ -1,5 +1,6 @@
 package ChefClient;
 
+import CustomerClient.Customer;
 import Shared.Burger;
 import ChefClient.Domain.Recipe;
 import ChefClient.Proxy.RecipeProvider;
@@ -17,12 +18,15 @@ public class ChefClient implements Chef,  Runnable {
     private RecipeProvider recipe;
     private ArrayList<Recipe> recipeList;
 
+
+
     public ChefClient(RecipeProvider rec) throws Exception {
+
         recipe= rec;
         recipeList= new ArrayList<Recipe>();
         makeSomeRecipes();
         Registry reg = LocateRegistry.getRegistry("Localhost", 1099);
-        server= (RemoteServer) reg.lookup("Burgers");
+        server= (RemoteServer) reg.lookup("Server");
         System.out.println("connected to Server");
     }
 
