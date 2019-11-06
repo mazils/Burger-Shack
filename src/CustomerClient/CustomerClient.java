@@ -31,6 +31,7 @@ public class CustomerClient implements Customer, Runnable
         Random random = new Random();
         while(working){
             try {
+                // it does take when the bar doesnt have burger
                 bar.getBurger();
             }catch(RemoteException e){
                 e.printStackTrace();

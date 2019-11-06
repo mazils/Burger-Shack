@@ -19,7 +19,7 @@ public class MainClass {
         {
             Customer customer = new CustomerClient();
             //todo java.io.FileNotFoundException: recipes.txt (The system cannot find the file specified)
-            RecipeProvider recipeProvider = new RecipeReader("recipes.txt");
+            RecipeProvider recipeProvider = new RecipeReader("C:\\Users\\Arturas\\IdeaProjects\\Burger-Shack\\src\\recipes.txt");
 
             Chef chef = new ChefClient(recipeProvider);
             Manager manager = new ManagerClient(customer,chef);

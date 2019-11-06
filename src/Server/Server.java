@@ -43,14 +43,14 @@ public class Server implements RemoteServer
     public Burger getBurger() throws RemoteException
     {   //returns first burger in the list and removes it from the list
         System.out.println("burger taken from the list");
-        return (Burger) listADT.remove(0);
+        return (Burger) listADT.remove(1);
 
     }
     //todo shutdown method it will shutdown chefs and costumers // callback is needed to use
     @Override
     public void stopWorking(Customer customer, Chef chef) throws RemoteException
     {
-        //callback 
+        //callback
         System.out.println("Everyone stops working");
         chef.stopWorking();
         customer.stopWorking();

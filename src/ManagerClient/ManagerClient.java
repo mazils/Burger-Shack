@@ -19,7 +19,7 @@ public class ManagerClient implements Manager,  Runnable {
 
     public ManagerClient(Customer customer,Chef chef) throws RemoteException, NotBoundException {
         Registry reg = LocateRegistry.getRegistry("Localhost", 1099);
-        server= (RemoteServer) reg.lookup("Burgers");
+        server= (RemoteServer) reg.lookup("Server");
         System.out.println("connected to Server");
 
         this.chef = chef;
