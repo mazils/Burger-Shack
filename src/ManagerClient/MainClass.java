@@ -17,10 +17,10 @@ public class MainClass {
 
         try
         {
-            Customer customer = new CustomerClient();
-            //todo java.io.FileNotFoundException: recipes.txt (The system cannot find the file specified)
+
             RecipeProvider recipeProvider = new RecipeReader("C:\\Users\\Arturas\\IdeaProjects\\Burger-Shack\\src\\recipes.txt");
 
+            Customer customer = new CustomerClient();
             Chef chef = new ChefClient(recipeProvider);
             Manager manager = new ManagerClient(customer,chef);
 

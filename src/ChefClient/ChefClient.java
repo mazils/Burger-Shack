@@ -38,6 +38,8 @@ public class ChefClient implements Chef,  Runnable {
     @Override
     public synchronized void addBurgers(Burger burger) throws RemoteException {
         server.putBurger(burger);
+        notifyAll();
+
 
     }
 
@@ -56,13 +58,19 @@ public class ChefClient implements Chef,  Runnable {
 
     public synchronized void createBurgers() throws Exception {
 
-        Random rand= new Random();
-        int ran= rand.nextInt((3-1)+1) + 1;
-        String random= Integer.toString(ran);
-        Recipe rec=recipe.getRecipeById(random);
-        Burger burg=rec.createBurger();
-        addBurgers(burg);
-        System.out.println("Added a new Shared.Burger to the Queue");
+        while (server.size() < 20)
+        {
+            Random rand = new Random();
+            int ran = rand.nextInt((3 - 1) + 1) + 1;
+            String random = Integer.toString(ran);
+            Recipe rec = recipe.getRecipeById(random);
+            Burger burg = rec.createBurger();
+            addBurgers(burg);
+            System.out.println("Added a new Shared.Burger to the Queue");
+
+        }
+        System.out.println("The chef is waiting for empty space");
+        wait();
     }
 
     @Override

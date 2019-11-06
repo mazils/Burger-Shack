@@ -11,7 +11,7 @@ import java.rmi.registry.Registry;
 import java.util.Scanner;
 
 public class ManagerClient implements Manager,  Runnable {
-    private static final String STOP= "Close down burger bar";
+    private static final String STOP= "Close down burger bar"; //do we need to have it static?
     private RemoteServer server;
 
     private Customer customer;
@@ -19,7 +19,7 @@ public class ManagerClient implements Manager,  Runnable {
 
     public ManagerClient(Customer customer,Chef chef) throws RemoteException, NotBoundException {
         Registry reg = LocateRegistry.getRegistry("Localhost", 1099);
-        server= (RemoteServer) reg.lookup("Server");
+        server = (RemoteServer) reg.lookup("Server");
         System.out.println("connected to Server");
 
         this.chef = chef;
