@@ -2,7 +2,10 @@ package ChefClient.Proxy;
 
 import ChefClient.Domain.Recipe;
 
-public class Proxy implements RecipeProvider {
+import java.io.Serializable;
+
+public class Proxy implements RecipeProvider, Serializable
+{
 
     private RecipeReader recipeReader;
 

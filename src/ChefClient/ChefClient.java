@@ -1,18 +1,21 @@
 package ChefClient;
 
 import CustomerClient.Customer;
+import CustomerClient.CustomerClient;
 import Shared.Burger;
 import ChefClient.Domain.Recipe;
 import ChefClient.Proxy.RecipeProvider;
 import Server.RemoteServer;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ChefClient implements Chef,  Runnable {
+public class ChefClient implements Chef,  Runnable, Serializable
+{
     private boolean Working = true;
     private RemoteServer server;
     private RecipeProvider recipe;
@@ -28,17 +31,20 @@ public class ChefClient implements Chef,  Runnable {
         Registry reg = LocateRegistry.getRegistry("Localhost", 1099);
         server= (RemoteServer) reg.lookup("Server");
         System.out.println("connected to Server");
+        server.addClient(this);
     }
 
     @Override
-    public void stopWorking() throws RemoteException {
+    public void stopWorking() throws RemoteException
+    {
+        System.out.println("chef stops working");
         Working =false;
     }
 
     @Override
     public synchronized void addBurgers(Burger burger) throws RemoteException {
         server.putBurger(burger);
-        notifyAll();
+
 
 
     }
@@ -84,5 +90,6 @@ public class ChefClient implements Chef,  Runnable {
                 e.printStackTrace();
             }
         }
+        System.out.println("ended");
     }
 }

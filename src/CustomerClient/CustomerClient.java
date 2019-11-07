@@ -3,13 +3,14 @@ package CustomerClient;
 import Server.RemoteServer;
 
 
+import java.io.Serializable;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Random;
 
-public class CustomerClient implements Customer, Runnable
+public class CustomerClient implements Customer, Runnable, Serializable
 {
     private RemoteServer bar;
     private boolean working;
@@ -19,34 +20,35 @@ public class CustomerClient implements Customer, Runnable
         bar = (RemoteServer) registry.lookup("Server");
         System.out.println("Connected");
         working = true;
+        bar.addClient(this);
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1Created");
     }
 
     @Override
     public void stopWorking() {
-        working = false;
+        System.out.println("customer stops working");
+         working = false;
+        System.out.println("working" + working);
     }
 
     @Override
     public void run() {
         Random random = new Random();
-        while(true){
+
+        while(working){
             try
             {
-                if (working && bar.size() > 0) // if the bar works and if there is something to take then it get the burger
-                {
+                    System.out.println("state of working in customer " + working);
                     // it does take when the bar doesnt have burger
 
                     System.out.println("Clients eats a burger" + "\n" + "there are ammount of burgers in list: " + bar.size());
                     bar.getBurger();
                     System.out.println("Client is eating burger");
                     //todo notify chef
-                }
-                else
-                {
-                    wait();
-                }
+
+
             }
-            catch (RemoteException | InterruptedException e)
+            catch (RemoteException  e)
             {
                 e.printStackTrace();
             }

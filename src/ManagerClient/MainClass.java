@@ -22,14 +22,13 @@ public class MainClass {
 
             Customer customer = new CustomerClient();
             Chef chef = new ChefClient(recipeProvider);
-            Manager manager = new ManagerClient(customer,chef);
+
 
             Thread customerThread = new Thread((Runnable) customer);
             Thread chefThread = new Thread((Runnable) chef);
-            Thread managerThread = new Thread((Runnable) manager);
+
             customerThread.start();
             chefThread.start();
-            managerThread.start();
         }
         catch (Exception e)
         {
