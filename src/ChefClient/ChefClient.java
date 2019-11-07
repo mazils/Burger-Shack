@@ -1,5 +1,6 @@
 package ChefClient;
 
+import ChefClient.Proxy.RecipeReader;
 import CustomerClient.Customer;
 import CustomerClient.CustomerClient;
 import Shared.Burger;
@@ -91,5 +92,21 @@ public class ChefClient implements Chef,  Runnable, Serializable
             }
         }
         System.out.println("ended");
+    }
+
+    public static void main(String[] args)
+    {
+        RecipeProvider recipeProvider = new RecipeReader("C:\\Users\\Arturas\\IdeaProjects\\Burger-Shack\\src\\recipes.txt");
+        try
+        {
+            Chef chef = new ChefClient(recipeProvider);
+            Thread chefThread = new Thread((Runnable) chef);
+            chefThread.start();
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }

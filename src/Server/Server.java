@@ -58,25 +58,9 @@ public class Server implements RemoteServer
     @Override
     public void stopWorking() throws RemoteException
     {
-
-
-
         System.out.println("Everyone stops working");
-
-        for(int i= 0;i< remoteArrayList.size();i++)
-        {
-            if(remoteArrayList.get(i) instanceof Customer)
-            {
-              customerArrayList.add((Customer) remoteArrayList.get(i));
-            }
-            else if(remoteArrayList.get(i) instanceof Chef)
-            {
-                chefArrayList.add((Chef) remoteArrayList.get(i));
-            }
-        }
-
-                stopChef();
-                stopCustomer();
+        stopChef();
+        stopCustomer();
 
 
 
@@ -111,6 +95,15 @@ public class Server implements RemoteServer
     {
         remoteArrayList.add(remote);
         System.out.println("costumer added");
+
+        if(remote instanceof Customer)
+        {
+            customerArrayList.add((Customer) remote);
+        }
+        else if(remote instanceof Chef)
+        {
+            chefArrayList.add((Chef) remote);
+        }
     }
 
 

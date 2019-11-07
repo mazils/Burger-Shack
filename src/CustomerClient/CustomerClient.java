@@ -28,7 +28,7 @@ public class CustomerClient implements Customer, Runnable, Serializable
     public void stopWorking() {
         System.out.println("customer stops working");
          working = false;
-        System.out.println("working" + working);
+
     }
 
     @Override
@@ -38,13 +38,12 @@ public class CustomerClient implements Customer, Runnable, Serializable
         while(working){
             try
             {
-                    System.out.println("state of working in customer " + working);
+                    System.out.println("state of working in customer ---" + working);
                     // it does take when the bar doesnt have burger
 
                     System.out.println("Clients eats a burger" + "\n" + "there are ammount of burgers in list: " + bar.size());
                     bar.getBurger();
-                    System.out.println("Client is eating burger");
-                    //todo notify chef
+
 
 
             }

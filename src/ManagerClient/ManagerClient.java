@@ -11,7 +11,7 @@ import java.rmi.registry.Registry;
 import java.util.Scanner;
 
 public class ManagerClient implements Manager,  Runnable {
-    private static final String STOP= "Close down burger bar"; //do we need to have it static?
+    private final String STOP= "Close down burger bar"; //do we need to have it static?
     private RemoteServer server;
 
 
