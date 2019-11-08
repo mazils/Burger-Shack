@@ -1,10 +1,10 @@
 package Server;
 
-public class Adapter implements ListADT{
+public class BlockingQueue implements ListADT{
 
     private ArrayList arrayList;
 
-    public Adapter()
+    public BlockingQueue()
     {
         arrayList = new ArrayList();
     }
