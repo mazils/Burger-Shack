@@ -1,66 +1,51 @@
 package Server;
 
-public class BlockingQueue implements ListADT{
+import Shared.Burger;
 
+public class BlockingQueue implements GuardedBlock {
+
+    private int capacity = 15;
+    private ListADT list;
     private ArrayList arrayList;
 
     public BlockingQueue()
     {
+        list= new ArrayList();
         arrayList = new ArrayList();
     }
 
     @Override
-    public void add(int index, Object element) {
-        arrayList.add(index, element);
+    public synchronized Burger removeBurger() {
+       while (list.size()<=0)
+       {
+           try{
+               System.out.println("Customers are waiting");
+               wait();
+           } catch (InterruptedException e) {
+               e.printStackTrace();
+           }
+       }
+       notifyAll();
+       return (Burger) list.get(0);
     }
 
     @Override
-    public void add(Object element) {
-        arrayList.add(element);
+    public synchronized void addBurger(Burger burger) {
+        while(list.size()>=capacity)
+        {
+            System.out.println("Chef is waiting for customers to eat burgers");
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        notifyAll();
+        list.add(burger);
     }
 
-    @Override
-    public void set(int index, Object element) {
-        arrayList.set(index, element);
-    }
-
-    @Override
-    public Object get(int index) {
-        return arrayList.get(index);
-    }
-
-    @Override
-    public Object remove(int index) {
-        return arrayList.remove(index);
-    }
-
-    @Override
-    public Object remove(Object element) {
-        return arrayList.remove(element);
-    }
-
-    @Override
-    public int indexOf(Object element) {
-        return arrayList.indexOf(element);
-    }
-
-    @Override
-    public boolean contains(Object element) {
-        return arrayList.contains(element);
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return arrayList.isEmpty();
-    }
-
-    @Override
-    public boolean isFull() {
-        return arrayList.isFull();
-    }
-
-    @Override
-    public int size() {
-        return arrayList.size();
+    public synchronized int size()
+    {
+        return list.size();
     }
 }

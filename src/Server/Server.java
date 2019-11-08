@@ -19,11 +19,11 @@ public class Server implements RemoteServer
     private ArrayList<Remote> remoteArrayList = new ArrayList<Remote>();
     private ArrayList<Customer> customerArrayList = new ArrayList<Customer>();
     private ArrayList<Chef> chefArrayList = new ArrayList<Chef>();
-    private ListADT listADT;
+    private GuardedBlock gb;
 
     public Server() throws RemoteException
     {
-        listADT = new BlockingQueue();//todo blockingQueue
+        gb = new BlockingQueue();
 
 
         try
@@ -40,7 +40,7 @@ public class Server implements RemoteServer
     {
         //add burger to end of list
         System.out.println("burger added to the list");
-        listADT.add(burger);
+        gb.addBurger(burger);
 
     }
 
@@ -48,7 +48,7 @@ public class Server implements RemoteServer
     public Burger getBurger() throws RemoteException
     {   //returns first burger in the list and removes it from the list
         System.out.println("burger taken from the list" + " size ");
-        return (Burger) listADT.remove(0);
+        return gb.removeBurger();
 
     }
 
@@ -85,7 +85,7 @@ public class Server implements RemoteServer
     @Override
     public int size()
     {
-        return listADT.size();
+        return  gb.size();
     }
 
     @Override

@@ -1,14 +1,11 @@
 package ChefClient;
 
-import ChefClient.Proxy.RecipeReader;
-import CustomerClient.Customer;
-import CustomerClient.CustomerClient;
-import Shared.Burger;
 import ChefClient.Domain.Recipe;
 import ChefClient.Proxy.RecipeProvider;
+import ChefClient.Proxy.RecipeReader;
 import Server.RemoteServer;
+import Shared.Burger;
 
-import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;

@@ -51,19 +51,13 @@ public class CustomerClient implements Customer, Runnable
 
                 System.out.println("Clients eats a burger" + "\n" + "there are ammount of burgers in list: " + bar.size());
                 bar.getBurger();
-
-            } catch (RemoteException e)
-            {
-                e.printStackTrace();
-            }
-            int p = random.nextInt(8000 - 4000) + 4000;
-            try
-            {
                 Thread.sleep(5000);
-            } catch (InterruptedException e)
+
+            } catch (RemoteException | InterruptedException e)
             {
                 e.printStackTrace();
             }
+
         }
         System.out.println("customer stops working");
         System.exit(0);
