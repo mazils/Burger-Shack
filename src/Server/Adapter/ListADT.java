@@ -1,4 +1,6 @@
-package Server;
+package Server.Adapter;
+
+import Server.Server;
 
 /**
  * ListADT defines the interface to a list collection - the abstract data type

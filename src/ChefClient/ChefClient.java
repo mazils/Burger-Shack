@@ -36,7 +36,7 @@ public class ChefClient implements Chef,  Runnable
     @Override
     public void stopWorking() throws RemoteException
     {
-        System.out.println("chef stops working");
+
         Working =false;
     }
 
@@ -63,19 +63,14 @@ public class ChefClient implements Chef,  Runnable
 
     public synchronized void createBurgers() throws Exception {
 
-        while (server.size() < 20)
-        {
+
             Random rand = new Random();
             int ran = rand.nextInt((3 - 1) + 1) + 1;
             String random = Integer.toString(ran);
             Recipe rec = recipe.getRecipeById(random);
             Burger burg = rec.createBurger();
             addBurgers(burg);
-            System.out.println("Added a new Shared.Burger to the Queue");
-
-        }
-        System.out.println("The chef is waiting for empty space");
-
+            System.out.println("Added a new"+ burg.getName()+"  to the Queue");
     }
 
     @Override
@@ -84,7 +79,7 @@ public class ChefClient implements Chef,  Runnable
         {
             try {
                 createBurgers();
-                Thread.sleep(1000);
+                Thread.sleep(2000);
             } catch (Exception e) {
                 e.printStackTrace();
             }

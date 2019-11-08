@@ -1,8 +1,9 @@
-package Server;
+package Server.Adapter;
 
 import Shared.Burger;
 
-public class BlockingQueue implements GuardedBlock {
+public class BlockingQueue implements IBlockingQueue
+{
 
     private int capacity = 15;
     private ListADT list;
@@ -26,7 +27,7 @@ public class BlockingQueue implements GuardedBlock {
            }
        }
        notifyAll();
-       return (Burger) list.get(0);
+       return (Burger) list.remove(0);
     }
 
     @Override
@@ -48,4 +49,6 @@ public class BlockingQueue implements GuardedBlock {
     {
         return list.size();
     }
+
+
 }

@@ -1,10 +1,8 @@
 package CustomerClient;
 
-import Server.ArrayList;
 import Server.RemoteServer;
 
 
-import java.io.Serializable;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -51,7 +49,7 @@ public class CustomerClient implements Customer, Runnable
 
                 System.out.println("Clients eats a burger" + "\n" + "there are ammount of burgers in list: " + bar.size());
                 bar.getBurger();
-                Thread.sleep(5000);
+                Thread.sleep(1000);
 
             } catch (RemoteException | InterruptedException e)
             {

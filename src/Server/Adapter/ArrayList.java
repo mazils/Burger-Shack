@@ -1,4 +1,4 @@
-package Server;
+package Server.Adapter;
 
 /**
  * ArrayList is an implementation of interface ListADT (the interface to a list

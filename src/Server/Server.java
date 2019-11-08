@@ -2,6 +2,9 @@ package Server;
 
 import ChefClient.Chef;
 import CustomerClient.Customer;
+import Server.Adapter.ArrayList;
+import Server.Adapter.BlockingQueue;
+import Server.Adapter.IBlockingQueue;
 import Shared.Burger;
 
 import java.rmi.AlreadyBoundException;
@@ -19,16 +22,16 @@ public class Server implements RemoteServer
     private ArrayList<Remote> remoteArrayList = new ArrayList<Remote>();
     private ArrayList<Customer> customerArrayList = new ArrayList<Customer>();
     private ArrayList<Chef> chefArrayList = new ArrayList<Chef>();
-    private GuardedBlock gb;
+    private IBlockingQueue blockingQueue;
 
     public Server() throws RemoteException
     {
-        gb = new BlockingQueue();
 
-
+        blockingQueue = new BlockingQueue();
         try
         {
             UnicastRemoteObject.exportObject(this, 0);
+            System.out.println("Server started");
         } catch (RemoteException e)
         {
             e.printStackTrace();
@@ -40,7 +43,7 @@ public class Server implements RemoteServer
     {
         //add burger to end of list
         System.out.println("burger added to the list");
-        gb.addBurger(burger);
+        blockingQueue.addBurger(burger);
 
     }
 
@@ -48,7 +51,7 @@ public class Server implements RemoteServer
     public Burger getBurger() throws RemoteException
     {   //returns first burger in the list and removes it from the list
         System.out.println("burger taken from the list" + " size ");
-        return gb.removeBurger();
+        return blockingQueue.removeBurger();
 
     }
 
@@ -66,18 +69,31 @@ public class Server implements RemoteServer
 
     }
 
-    public void stopChef() throws RemoteException
+    public void stopChef()
     {
         for(int i= 0;i< chefArrayList.size();i++)
         {
-            chefArrayList.get(i).stopWorking();
+            try
+            {
+                chefArrayList.get(i).stopWorking();
+            } catch (RemoteException e)
+            {
+                e.getMessage();
+            }
         }
     }
-    public void stopCustomer() throws RemoteException
+    public void stopCustomer()
     {
         for(int i= 0;i< customerArrayList.size();i++)
         {
-            customerArrayList.get(i).stopWorking();
+            try
+            {
+                customerArrayList.get(i).stopWorking();
+            }
+            catch (RemoteException e)
+            {
+                e.getMessage();
+            }
         }
     }
 
@@ -85,7 +101,7 @@ public class Server implements RemoteServer
     @Override
     public int size()
     {
-        return  gb.size();
+        return blockingQueue.size();
     }
 
     @Override
@@ -111,7 +127,6 @@ public class Server implements RemoteServer
         try
         {
             registry = LocateRegistry.createRegistry(1099);
-            System.out.println("Server started");
             Server server = new Server();
             registry.bind("Server",server);
         }
