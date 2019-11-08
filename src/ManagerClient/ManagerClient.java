@@ -4,7 +4,6 @@ import ChefClient.Chef;
 import CustomerClient.Customer;
 import Server.RemoteServer;
 
-
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -12,25 +11,23 @@ import java.rmi.registry.Registry;
 import java.util.Scanner;
 
 public class ManagerClient implements Manager,  Runnable {
-    private static final String STOP= "Close down burger bar"; //do we need to have it static? //Nope.. buh it works just fine that way
+    private final String STOP= "Close down burger bar"; //do we need to have it static?
     private RemoteServer server;
 
-    private Customer customer;
-    private Chef chef;
 
-    public ManagerClient(Customer customer,Chef chef) throws RemoteException, NotBoundException {
+
+    public ManagerClient() throws RemoteException, NotBoundException {
         Registry reg = LocateRegistry.getRegistry("Localhost", 1099);
         server = (RemoteServer) reg.lookup("Server");
         System.out.println("connected to Server");
 
-        this.chef = chef;
-        this.customer = customer;
+
     }
 
     @Override
     public synchronized void allStopWork() throws RemoteException {
         System.out.println(STOP);
-        server.stopWorking(customer,chef);
+        server.stopWorking();
     }
 
     @Override
@@ -51,6 +48,24 @@ public class ManagerClient implements Manager,  Runnable {
                     }
                 }
             }
+        }
+
+    }
+
+    public static void main(String[] args)
+    {
+        try
+        {
+            Manager manager = new ManagerClient();
+            Thread managerThread = new Thread((Runnable) manager);
+            managerThread.start();
+        }
+        catch (RemoteException e)
+        {
+            e.printStackTrace();
+        } catch (NotBoundException e)
+        {
+            e.printStackTrace();
         }
     }
 }

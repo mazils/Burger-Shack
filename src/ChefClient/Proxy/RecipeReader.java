@@ -7,6 +7,7 @@ import ChefClient.Domain.Recipe;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,7 +18,7 @@ import java.util.Scanner;
  *   Example:<br>
  * <code>1; Hamburger; 4 inch bun; Tomato; Onion; Beef; Lettuce; Cucumber; Ketchup</code>
  */
-public class RecipeReader implements RecipeProvider
+public class RecipeReader implements RecipeProvider, Serializable
 {
     private String filename;
 
