@@ -12,10 +12,11 @@ import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ChefClient implements Chef,  Runnable, Serializable
+public class ChefClient implements Chef,  Runnable
 {
     private boolean Working = true;
     private RemoteServer server;
@@ -25,7 +26,7 @@ public class ChefClient implements Chef,  Runnable, Serializable
 
 
     public ChefClient(RecipeProvider rec) throws Exception {
-
+        UnicastRemoteObject.exportObject(this, 0);
         recipe= rec;
         recipeList= new ArrayList<Recipe>();
         makeSomeRecipes();
@@ -77,7 +78,7 @@ public class ChefClient implements Chef,  Runnable, Serializable
 
         }
         System.out.println("The chef is waiting for empty space");
-        wait();
+
     }
 
     @Override
@@ -91,7 +92,8 @@ public class ChefClient implements Chef,  Runnable, Serializable
                 e.printStackTrace();
             }
         }
-        System.out.println("ended");
+        System.out.println("ends work chef");
+        System.exit(0);
     }
 
     public static void main(String[] args)
