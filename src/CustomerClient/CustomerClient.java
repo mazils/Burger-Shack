@@ -1,5 +1,6 @@
 package CustomerClient;
 
+import Server.ArrayList;
 import Server.RemoteServer;
 
 
@@ -25,6 +26,8 @@ public class CustomerClient implements Customer, Runnable
     public void stopWorking() {
         working = false;
     }
+
+
 
     @Override
     public void run() {

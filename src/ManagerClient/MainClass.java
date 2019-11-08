@@ -18,7 +18,7 @@ public class MainClass {
         try
         {
 
-            RecipeProvider recipeProvider = new RecipeReader("C:\\Users\\Arturas\\IdeaProjects\\Burger-Shack\\src\\recipes.txt");
+            RecipeProvider recipeProvider = new RecipeReader("C:\\Users\\Emmanuel Simon\\IdeaProjects\\Burger-Shack\\src\\recipes.txt");
 
             Customer customer = new CustomerClient();
             Chef chef = new ChefClient(recipeProvider);

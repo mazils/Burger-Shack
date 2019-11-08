@@ -75,6 +75,7 @@ public class Server implements RemoteServer
         try
         {
             registry = LocateRegistry.createRegistry(1099);
+            System.out.println("Server started");
             Server server = new Server();
             registry.bind("Server",server);
         }

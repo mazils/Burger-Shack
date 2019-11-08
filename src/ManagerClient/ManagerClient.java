@@ -4,6 +4,7 @@ import ChefClient.Chef;
 import CustomerClient.Customer;
 import Server.RemoteServer;
 
+
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -11,7 +12,7 @@ import java.rmi.registry.Registry;
 import java.util.Scanner;
 
 public class ManagerClient implements Manager,  Runnable {
-    private static final String STOP= "Close down burger bar"; //do we need to have it static?
+    private static final String STOP= "Close down burger bar"; //do we need to have it static? //Nope.. buh it works just fine that way
     private RemoteServer server;
 
     private Customer customer;
